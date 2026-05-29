@@ -36,6 +36,7 @@ COMMAND_PREFIX: str = "!"   # Legacy prefix commands (setup only)
 
 # Cogs to load at startup (order matters — db must be implicit via imports)
 COGS: list[str] = [
+    "bot.cogs.admin",
     "bot.cogs.setup",
     "bot.cogs.fishing",
     "bot.cogs.shop",
