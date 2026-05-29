@@ -1,0 +1,32 @@
+# Environment variables — NEVER commit this
+.env
+
+# Database file — server-specific, not for version control
+bot/database/*.db
+bot/database/*.db-shm
+bot/database/*.db-wal
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
