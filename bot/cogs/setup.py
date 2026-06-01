@@ -359,6 +359,35 @@ def _commands_guide_embeds() -> list[discord.Embed]:
     e5.add_field(name="📍 Where",          value="Anywhere.", inline=False)
     embeds.append(e5)
 
+    e6 = discord.Embed(
+        title="💎 NovelCodex Supporter Commands",
+        color=0xF0B429,
+        description="Exclusive commands for **NovelCodex.org** supporters. Requires a supporter role.",
+    )
+    e6.add_field(
+        name="🎨 `/myrole` — Custom Role *(Seeker / Sage / Immortal Sage)*",
+        value=(
+            "`/myrole create [name] [#hex]` — Create a custom colour role\n"
+            "`/myrole edit` — Edit your role's name or colour\n"
+            "`/myrole delete` — Delete your custom role"
+        ),
+        inline=False,
+    )
+    e6.add_field(
+        name="🔊 `/mychannel` — Private Voice Channel *(Reader / Scholar)*",
+        value=(
+            "`/mychannel create [name]` — Create a private voice channel\n"
+            "`/mychannel rename [name]` — Rename it\n"
+            "`/mychannel limit [0–99]` — Set a user cap\n"
+            "`/mychannel add @user` — Allow someone in\n"
+            "`/mychannel remove @user` — Remove someone's access\n"
+            "`/mychannel delete` — Delete the channel"
+        ),
+        inline=False,
+    )
+    e6.set_footer(text="Visit NovelCodex.org to become a supporter.")
+    embeds.append(e6)
+
     return embeds
 
 
@@ -489,6 +518,40 @@ def _server_guide_embeds() -> list[discord.Embed]:
         inline=False,
     )
     embeds.append(e5)
+
+    e6 = discord.Embed(
+        title="💎 NovelCodex.org — Discord Perks",
+        color=0xF0B429,
+        description=(
+            "Supporters of **[NovelCodex.org](https://novelcodex.org)** unlock exclusive Discord perks "
+            "based on their tier. Perks are granted automatically when your supporter role is assigned.\n​"
+        ),
+    )
+    e6.add_field(
+        name="🎨 Custom Role — `/myrole`",
+        value=(
+            "Available to: **Seeker, Sage, Immortal Sage** and any subscriber role *(any $5+ supporter)*\n\n"
+            "`/myrole create [name] [#hex]` — Create your own uniquely coloured role\n"
+            "`/myrole edit` — Change your role's name or colour\n"
+            "`/myrole delete` — Remove your custom role"
+        ),
+        inline=False,
+    )
+    e6.add_field(
+        name="🔊 Private Voice Channel — `/mychannel`",
+        value=(
+            "Available to: **active subscribers (Reader, Scholar)**\n\n"
+            "`/mychannel create [name]` — Spawn a private voice channel just for you\n"
+            "`/mychannel rename [name]` — Rename your channel\n"
+            "`/mychannel limit [0–99]` — Set a user cap (0 = unlimited)\n"
+            "`/mychannel add @user` — Grant someone access\n"
+            "`/mychannel remove @user` — Revoke someone's access\n"
+            "`/mychannel delete` — Delete your channel"
+        ),
+        inline=False,
+    )
+    e6.set_footer(text="Visit NovelCodex.org to support the project and unlock your perks.")
+    embeds.append(e6)
 
     return embeds
 
