@@ -51,6 +51,7 @@ COGS: list[str] = [
     "bot.cogs.quests",
     "bot.cogs.profile",
     "bot.cogs.unlocks",
+    "bot.cogs.novelcodex",
 ]
 
 # ── Feature flags ─────────────────────────────────────────────────────────────
